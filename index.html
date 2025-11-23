@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Social App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOGIN / SIGNUP -->
+    <div class="auth-container" id="authSection">
+        <div class="auth-box">
+            <h2 id="authTitle">Login</h2>
+
+            <input type="text" id="authName" placeholder="Name (Signup only)">
+            <input type="email" id="authEmail" placeholder="Email">
+            <input type="password" id="authPassword" placeholder="Password">
+
+            <button onclick="handleAuth()" class="btn-primary">Continue</button>
+
+            <p class="switch-text">
+                <span id="switchBtn" onclick="toggleAuth()">Dont have an account? <b style="color: green;">Signup</b></span>
+            </p>
+        </div>
+    </div>
+
+    <!-- MAIN APP -->
+    <div id="app" class="hidden">
+
+        <nav class="navbar">
+            <h2 style="font-family: 'popins',sans-serif; font-weight: 900;">SM-App</h2>
+            <p id="welcomeUser"></p>
+            <button onclick="logout()" class="btn-small">Logout</button>
+        </nav>
+
+        <div class="container">
+
+            <!-- CREATE POST -->
+            <div class="post-box">
+                <textarea id="postText" placeholder="What's on your mind?"></textarea>
+                <input type="text" id="postImage" placeholder="Enter Image URL (optional)">
+                <button onclick="createPost()" class="btn-primary">Post</button>
+            </div>
+
+            <!-- SEARCH + SORT -->
+            <div class="top-controls">
+                <input type="text" id="searchInput" placeholder="Search posts..." oninput="renderPosts()">
+                <select id="sortSelect" onchange="renderPosts()">
+                    <option value="latest">Latest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="likes">Most Liked</option>
+                </select>
+            </div>
+
+            <!-- POSTS FEED -->
+            <div id="postFeed"></div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
+    

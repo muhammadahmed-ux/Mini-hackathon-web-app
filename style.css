@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    color: #111;
+}
+
+/* AUTH */
+.auth-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-box {
+    background: #fff;
+    padding: 30px;
+    width: 330px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.08);
+}
+
+.auth-box h2 {
+    margin-bottom: 10px;
+}
+
+.auth-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: green;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    opacity: 0.95;
+}
+
+.btn-small {
+    padding: 6px 12px;
+    background: black;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.switch-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.switch-text span {
+    color: black;
+    cursor: pointer;
+}
+
+/* MAIN APP */
+.hidden {
+    display: none;
+}
+
+.navbar {
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    color: green;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* CREATE POST */
+.post-box {
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.post-box textarea,
+.post-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* SEARCH + SORT */
+.top-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.top-controls input,
+.top-controls select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* POST CARD */
+.post {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.post b {
+    font-size: 14px;
+}
+
+.post p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.post img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.post small {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #777;
+}
+
+/* FOOTER ACTIONS */
+.post-footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #666;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.action-group {
+    display: flex;
+    gap: 12px;
+}
+
+.action-btn {
+    cursor: pointer;
+    font-size: 14px;
+    color: #1877f2;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.action-btn span.icon {
+    font-size: 16px;
+}
+
+.like-btn-active {
+    color: #e0245e;
+}
+
+/* EDIT SECTION (INLINE BOX) */
+.edit-box {
+    background: #f7f9fc;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 12px;
+    border: 1px solid #dce3f0;
+    animation: slideDown 0.25s ease;
+}
+
+.edit-box textarea,
+.edit-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.edit-actions .btn-primary {
+    width: auto;
+    padding: 8px 14px;
+    font-size: 13px;
+}
+
+.edit-actions .btn-small {
+    background: #e4e6eb;
+    color: #111;
+}
+
+/* ANIMATION */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+    .container {
+        padding: 10px;
+    }
+
+    .auth-box {
+        width: 90%;
+    }
+}
